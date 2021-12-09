@@ -42,7 +42,7 @@ Paid Vine 5-star reviews accounted for 0.01% of the data, whereas 2% were unpaid
 
 % of Paid 5-Star Reviews  |  % of Unpaid 5-Star Reviews
 :------------------------:|:---------------------------:
-![Fig D-3_05](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_05_percnetage_vine_5_star.png?raw=true)|![Fig D-3_06](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_06_percnetage_non-vine_5_star.png?raw=true)
+![Fig D-3_05](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_05_percnetage_vine_5_star2.png?raw=true)|![Fig D-3_06](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_06_percnetage_non-vine_5_star2.png?raw=true)
 
 ## Summary
 This analysis could not conclude a bias in the selected data from the Amazon Major Appliance reviews, Vine reviews did not appear to affect 5-star reviews.  There were significantly more 5-star reviews from unpaid reviews.
