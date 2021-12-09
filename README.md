@@ -6,7 +6,7 @@ PySpark was used to perform the ETL process to extract the dataset, transform th
 
 
 ## Background
-The Amazon Vine program is a service that allows manufacturers to receive reviews for their products. Companies pay a fee to Amazon, and in return, Amazon sends products to Vine Members, who are required to publish a review.
+Amazon Vine invites the most trusted reviewers on Amazon to post opinions about new and pre-release items to help their fellow customers make informed purchase decisions. Amazon invites customers to become Vine Voices based on their reviewer rank, which is a reflection of the quality and helpfulness of their reviews as judged by other Amazon customers. Amazon provides Vine members with free products that have been submitted to the program by participating vendors. Vine reviews are the independent opinions of the Vine Voices. The vendor cannot influence, modify or edit the reviews. Amazon does not modify or edit Vine reviews, as long as they comply with our posting guidelines. A Vine review is identified with the green stripe Customer review from the Amazon Vine Program.
 
 Data from Amazon's Major Appliance department was analyzed to determine paid Vine review makes a difference in the percentage of 5-star reviews. The Extract, Transform, and Load (ETL) process used on the Major Appliance dataset. An Amazon Web Service (AWS) and Relational Database Service (RDS) pgAdmin database was created, and the Major Appliance dataset was downloaded from and Amazon S3 bucket. Local pgAdmin was utilized to connect to AWS RDS, pySpark (via Google CoLab), and postgreSQL were used against the dataset to create four separate DataFrames to match the table schema within pgAdmin. The transformed data was then uploaded into pgAdmin on a local computer.  
 
@@ -32,13 +32,13 @@ Paid Reviews              |  Unpaid Reviews
 
 
 
-Vine 5 star Reviews              |  Non-Vine 5 star Reviews
+Vine 5 star Reviews       |  Non-Vine 5 star Reviews
 :------------------------:|:-------------------------:
 ![Fig D-3_03](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_03_vine_5_star.png?raw=true)  |  ![Fig D-3_04](https://github.com/ASCHEET/Amazon_Vine_Analysis/blob/main/Resources/D-3_04_not-vine_5_star.png?raw=true)
 
 
 
-Paid Vine 5-star reviews accounted for 0.01% of the data, whereas 2% were unpaid 5-star reviews.
+Paid Vine 5-star reviews accounted for 51.4% of the data, whereas 39.6% were unpaid 5-star reviews. 
 
 % of Paid 5-Star Reviews  |  % of Unpaid 5-Star Reviews
 :------------------------:|:---------------------------:
@@ -47,8 +47,8 @@ Paid Vine 5-star reviews accounted for 0.01% of the data, whereas 2% were unpaid
 ## Summary
 This analysis could not conclude a bias in the selected data from the Amazon Major Appliance reviews, Vine reviews did not appear to affect 5-star reviews.  There were significantly more 5-star reviews from unpaid reviews.
 
-Additional analysis should be conducted against multiple Amazon review datasets, looking at more of a qualatiive analysis.  Although 5 star reviews are desirable, they are not always practial.  Another helpful analysis, would be if there was a time component for understanding, if Vine 5 star reviews with longevity.  Plotting the 'good votes' over time to see how optimum time a review is used before a new reiew could be added.  
-Also, an indepth anlaysis of the lower star reviews to determine if there were issues with manufacturing would be value added.  Using Natural Language Processing, analysis can be performed on items such as "quality", "stopped working", "better" to determine what issues could be addressed.
+Another helpful analysis would be if there was a time component for understanding effectiveness of reviews.  For example, if reviews are more read and voted on in the first month or two of the review and if the traffic associated with the review tapers off.  That can be used to perhaps insert an additional review after a certain amount if time is warranted.  Plotting the 'good votes' over time to see how optimum time a review is used before a new review could be added.  
+Additionally, although 5-star reviews are desirable, too much focus may not always practical.  An in-depth analysis of the lower star reviews to determine if there were issues with manufacturing would be value added.  For example, using Natural Language Processing, analysis can be performed on items such as "quality", "stopped working", "better" to determine what issues could be addressed by the manufacturer.
 
 
 
